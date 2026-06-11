@@ -3,9 +3,10 @@
   <div :class="store.mobileFuncState ? 'function mobile' : 'function'">
     <el-row :gutter="20">
       <el-col :span="12">
-        <div class="left">
-          <Hitokoto />
-          <Music v-if="playerHasId" />
+        <div class="left cards">
+          <!--Hitokoto />
+          <Music v-if="playerHasId" /-->
+          <LocalMusic/>
         </div>
       </el-col>
       <el-col :span="12">
@@ -21,7 +22,8 @@
               <span> {{ currentTime.hour }}:{{ currentTime.minute }}:{{ currentTime.second }}</span>
             </div>
           </div>
-          <Weather />
+          <!-- 天气 -->
+          <!--Weather /-->
         </div>
       </el-col>
     </el-row>
@@ -34,6 +36,7 @@ import { mainStore } from "@/store";
 import Music from "@/components/Music.vue";
 import Hitokoto from "@/components/Hitokoto.vue";
 import Weather from "@/components/Weather.vue";
+import LocalMusic from "@/components/LocalMusic.vue";
 
 const store = mainStore();
 
@@ -42,7 +45,7 @@ const currentTime = ref({});
 const timeInterval = ref(null);
 
 // 播放器 id
-const playerHasId = import.meta.env.VITE_SONG_ID;
+//const playerHasId = import.meta.env.VITE_SONG_ID;
 
 // 更新时间
 const updateTimeData = () => {
@@ -137,6 +140,7 @@ onBeforeUnmount(() => {
           }
         }
       }
+      /* 天气 */
       .weather {
         text-align: center;
         width: 100%;

@@ -10,7 +10,7 @@
       </div>
     </div>
     <!-- 简介 -->
-    <div class="description cards" @click="changeBox">
+    <div class="description cards">
       <div class="content">
         <Icon size="16">
           <QuoteLeft />
@@ -106,7 +106,7 @@ watch(
       font-family: "Pacifico-Regular";
 
       .bg {
-        font-size: 5rem;
+        font-size: 4rem;
       }
 
       .sm {
