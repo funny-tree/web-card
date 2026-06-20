@@ -10,15 +10,19 @@
       </div>
     </div>
     <!-- 简介 -->
-    <div class="description cards">
+    <div class="description cards" @click="changeBox">
       <div class="content">
         <Icon size="16">
           <QuoteLeft />
         </Icon>
         <Transition name="fade" mode="out-in">
-          <div :key="descriptionText.hello + descriptionText.text" class="text">
+          <div
+            :key="descriptionText.hello + descriptionText.text + descriptionText.footer"
+            class="text"
+          >
             <p>{{ descriptionText.hello }}</p>
             <p>{{ descriptionText.text }}</p>
+            <p class="footer">{{ descriptionText.footer }}</p>
           </div>
         </Transition>
         <Icon size="16">
@@ -54,6 +58,7 @@ const siteUrl = computed(() => {
 const descriptionText = reactive({
   hello: import.meta.env.VITE_DESC_HELLO,
   text: import.meta.env.VITE_DESC_TEXT,
+  footer: import.meta.env.VITE_DESC_FOOTER,
 });
 
 // 切换右侧功能区
@@ -79,9 +84,11 @@ watch(
     if (value) {
       descriptionText.hello = import.meta.env.VITE_DESC_HELLO_OTHER;
       descriptionText.text = import.meta.env.VITE_DESC_TEXT_OTHER;
+      descriptionText.footer = import.meta.env.VITE_DESC_FOOTER_OTHER;
     } else {
       descriptionText.hello = import.meta.env.VITE_DESC_HELLO;
       descriptionText.text = import.meta.env.VITE_DESC_TEXT;
+      descriptionText.footer = import.meta.env.VITE_DESC_FOOTER;
     }
   },
 );
@@ -145,14 +152,21 @@ watch(
       justify-content: space-between;
 
       .text {
+        flex: 1;
         margin: 0.75rem 1rem;
         line-height: 2rem;
-        margin-right: auto;
         transition: opacity 0.2s;
 
         p {
           &:nth-of-type(1) {
             font-family: "Pacifico-Regular";
+          }
+          &.footer {
+            margin-top: 0.5rem;
+            font-size: 0.7rem;
+            line-height: 1rem;
+            text-align: right;
+            opacity: 0.6;
           }
         }
       }
