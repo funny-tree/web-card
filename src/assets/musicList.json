@@ -1,8 +1,32 @@
 [
     {
         "name": "Cheerful",
-        "artist": "mababnua",
-        "url":"/music/m1.mp3",
-        "cover":"/music/m1.jpg"
+        "artist": "mabanua",
+        "url": "/music/cheerful.mp3",
+        "cover": "/music/mabanua1.jpg"
+    },
+    {
+        "name": "Homecoming",
+        "artist": "mabanua",
+        "url": "/music/homecoming.mp3",
+        "cover": "/music/mabanua1.jpg"
+    },
+    {
+        "name": "Reaching Out",
+        "artist": "mabanua",
+        "url": "/music/reaching_out.mp3",
+        "cover": "/music/mabanua1.jpg"
+    },
+    {
+        "name": "Rise UpDiamond in the Sky",
+        "artist": "mabanua",
+        "url": "/music/rise_up_diamond_in_the_sky.mp3",
+        "cover": "/music/mabanua1.jpg"
+    },
+    {
+        "name": "The theme of Liu",
+        "artist": "mabanua",
+        "url": "/music/the_theme_of_liu.mp3",
+        "cover": "/music/mabanua1.jpg"
     }
 ]

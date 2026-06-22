@@ -44,9 +44,6 @@ import logs from "@/assets/changelog.json";
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-height: 60vh;
-    overflow-y: auto;
-    padding-right: 4px;
     .log-item {
       padding: 1rem 1.25rem;
       .log-head {

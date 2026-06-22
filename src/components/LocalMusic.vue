@@ -19,7 +19,6 @@
       :theme="'#efefef'"
       :volume="0.7"
       :listFolded="true"
-      :listMaxHeight="100"
       @play="onPlay"
       @pause="onPause"
     />
@@ -124,26 +123,7 @@ const nextSong = () => {
       display: none;
     }
     :deep(.aplayer-list) {
-      max-height: 100px;
-      background-color: transparent;
-      border-top: none !important;
-      ol {
-        li {
-          border-color: transparent;
-          &.aplayer-list-light {
-            background: #ffffff40;
-            border-radius: 4px;
-          }
-          &:hover {
-            background: #ffffff26 !important;
-            border-radius: 4px !important;
-          }
-          .aplayer-list-index,
-          .aplayer-list-author {
-            color: #efefef;
-          }
-        }
-      }
+      display: none;
     }
   }
 }
